@@ -7,10 +7,12 @@ import com.example.shraboni.technicaltestmcc.model.DataResponse;
 import java.util.List;
 
 import retrofit2.Call;
+import retrofit2.http.Field;
 import retrofit2.http.POST;
 
 public interface APIService {
 
     @POST("/mobsvc/ContentFile.php")
-    Call<DataResponse> getAllPhotos();
+    Call<DataResponse> getAllPhotos(@Field("AppId") int appid,
+    @Field("MenuId") int menuid);
 }

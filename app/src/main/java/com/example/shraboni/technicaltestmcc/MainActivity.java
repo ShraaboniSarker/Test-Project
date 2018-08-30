@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void getData() {
 
-        Call<DataResponse> call = apiService.getAllPhotos();
+        Call<DataResponse> call = apiService.getAllPhotos(9,35);
         call.enqueue(new Callback<DataResponse>() {
             @Override
             public void onResponse(Call<DataResponse> call, Response<DataResponse> response) {
